@@ -21,3 +21,9 @@ class bunny(object):
         self.name = "testBunny"
         self.radioactive_mutant_vampire_bunny = rmvb
 
+
+# Print population information
+def printPop(bunnyPop):
+    for i in range(0, len(bunnyPop)):
+        print("Bunny ", i+1, "/", len(bunnyPop), sep = "", end = ": ")
+        print( "age =", bunnyPop[i].age, "\tsex =", bunnyPop[i].sex, "\tcolor =", bunnyPop[i].color, "\tname =", bunnyPop[i].name, "\trmvb:", bunnyPop[i].radioactive_mutant_vampire_bunny)
