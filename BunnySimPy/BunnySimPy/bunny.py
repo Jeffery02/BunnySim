@@ -11,8 +11,13 @@ class bunny(object):
 
         color = ["white  ", "brown  ", "black  ", "spotted"]
 
+        if random.randint(1,100) <= 2:
+            rmvb = True
+        else:
+            rmvb = False
+
         self.sex = sex
-        self.color = color(random.getrandbits(2))
+        self.color = color[random.getrandbits(2)]
         self.name = "testBunny"
-        self.radioactive_mutant_vampire_bunny = random.getrandbits(1)
+        self.radioactive_mutant_vampire_bunny = rmvb
 
