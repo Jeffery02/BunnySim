@@ -108,7 +108,7 @@ def mutateBunnies(bunnyPop):
 
 # Remove bunnies that died of old age
 def bunnyDeath(bunnyPop):
-    for rabbit in bunnyPop:
+    for rabbit in reversed(bunnyPop):
         if rabbit.radioactive_mutant_vampire_bunny and (rabbit.age > 50):           # If mutated bunny, then lives to be 50
             print("Radioactive mutant vampire bunny", rabbit.name, "has died")
             bunnyPop.remove(rabbit)                                                 # Mutated bunny dies of old age
@@ -126,5 +126,5 @@ def bunnyDeath(bunnyPop):
         print(deadBunnies, "bunnies have starved to death")                         # Print the number of bunnies that starved to death
 
         input("Press enter to continue")
-        
+
 
