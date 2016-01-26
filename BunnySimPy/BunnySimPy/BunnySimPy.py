@@ -1,18 +1,21 @@
 import bunny
 import random
 
-rabbit = []
+years = 0
+rabbits = []
 
 for i in range(0,5):
-    rabbit.append(bunny.bunny())
+    rabbits.append(bunny.bunny())
 
-for obj in rabbit:
-    print(obj.age, obj.sex, obj.color, obj.name, obj.radioactive_mutant_vampire_bunny)
+bunny.printPop(rabbits)
 
-print("\npopulation =", len(rabbit))
-bunny.printPop(rabbit)
-deadBunny = random.randint(0,len(rabbit)-1)
-print("\nBunny", deadBunny + 1, "has died")
-del rabbit[deadBunny]
-print("\npopulation =", len(rabbit))
-bunny.printPop(rabbit)
+print("Initial bunny population")
+input("Press enter to begin the simulation")
+
+while len(rabbits) > 0:
+    bunny.endYear(rabbits)
+    bunny.printPop(rabbits)
+    years += 1
+    print("Year", years, "has ended with", len(rabbits), "still alive")
+
+print("All bunnies have died")
